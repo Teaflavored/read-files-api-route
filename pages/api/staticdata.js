@@ -7,6 +7,7 @@ export default async function handler(req, res) {
   //Find the absolute path of the json directory
   const jsonDirectory = path.join(process.cwd(), "json");
   //Read the json data file data.json
+  console.log(jsonDirectory);
   const fileContents = await fs.readFile(jsonDirectory + "/data.json", "utf8");
   const fileContents2 = await fs.readFile(
     jsonDirectory + `/${filename}.json`,
